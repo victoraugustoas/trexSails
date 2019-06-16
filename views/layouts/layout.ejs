@@ -50,7 +50,13 @@
   <div id="page-wrap">
     <header id="page-header"
       class="navbar navbar-expand-sm navbar-dark bg-dark flex-column flex-md-row justify-content-between">
-      <a class="navbar-brand mr-0" href="/"><img class="logo" alt="NEW_APP_NAME logo" src="/images/dino.png" /></a>
+      <a class="navbar-brand mr-0" href="/">
+        <div>
+          <img style="display: inline; filter: invert(100%);" class="logo" alt="NEW_APP_NAME logo"
+            src="/images/dino.png" />
+          <p style="display: inline">T-Rex Runner</p>
+        </div>
+      </a>
       <div class="navbar-nav flex-row">
         <!-- LOGGED-IN NAVIGATION -->
         <% if(me) { %>
