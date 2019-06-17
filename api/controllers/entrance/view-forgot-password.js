@@ -28,7 +28,7 @@ module.exports = {
       throw {redirect: '/'};
     }
 
-    return {};
+    return {title: 'Recuperar senha'};
 
   }
 

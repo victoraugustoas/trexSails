@@ -19,7 +19,7 @@ module.exports = {
   fn: async function () {
 
     // All done.
-    return;
+    return { title: 'Termos de uso' };
 
   }
 

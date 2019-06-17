@@ -48,7 +48,8 @@ module.exports = {
 
     // Grab token and include it in view locals
     return {
-      token: inputs.token
+      token: inputs.token,
+      title: 'Cadastrar nova senha'
     };
 
   }

@@ -10,7 +10,7 @@ module.exports = {
   exits: {
 
     success: {
-      viewTemplatePath: 'pages/faq'
+      viewTemplatePath: 'pages/faq',
     }
 
   },
@@ -19,7 +19,7 @@ module.exports = {
   fn: async function () {
 
     // Respond with view.
-    return {};
+    return { title: 'FAQ' };
 
   }
 
