@@ -23,7 +23,6 @@ module.exports = {
     return {
       stripePublishableKey: sails.config.custom.enableBillingFeatures ? sails.config.custom.stripePublishableKey : undefined,
       title: 'Dashboard'
-
     };
 
   }
