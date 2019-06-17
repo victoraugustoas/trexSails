@@ -21,7 +21,7 @@ module.exports = {
     sigla: {
       type: 'string',
       required: true,
-      columnType: 'char',
+      columnType: 'char(4)',
       maxLength: 4
     },
     descricao: {
