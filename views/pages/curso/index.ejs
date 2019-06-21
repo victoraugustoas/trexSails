@@ -1,49 +1,57 @@
 <div id="index">
 
-  <div class="container">
+    <div class="container">
 
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item active">Cursos</li>
-      </ol>
-    </nav>
+        <div class="row">
+            <nav aria-label="breadcrumb" class="w-100">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">Cursos</li>
+                </ol>
+            </nav>
+        </div>
 
-    <h1>Cursos</h1>
+
+        <div class="d-flex flex-row justify-content-between py-3">
+            <h1>Cursos</h1>
+
+            <div>
+                <a href="/curso/create" class="btn btn-success">Criar curso</a>
+            </div>
+        </div>
 
 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Sigla</th>
+                    <th scope="col">Nome do Curso</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cursos.forEach(element => { %>
+                <tr>
+                    <td><%= element.id%></td>
+                    <td><%= element.sigla%></td>
+                    <td><%= element.nome%></td>
+                    <td>
+                        <a href="curso/<%= element.id%>"><i class="fa fa-eye"></i></a>
+                        <a href="">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-remove"></i>
+                        </a>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Sigla</th>
-          <th scope="col">Nome do Curso</th>
-          <th scope="col">Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% cursos.forEach(element => { %>
-        <tr>
-          <td><%= element.id%></td>
-          <td><%= element.sigla%></td>
-          <td><%= element.nome%></td>
-          <td>
-            <a href="curso/<%= element.id%>"><i class="fa fa-eye"></i></a>
-            <a href="">
-              <i class="fa fa-pencil"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-remove"></i>
-            </a>
-          </td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table>
+    </div>
 
-  </div>
-
-  <!-- <p>(See also <em>assets/styles/pages/curso/index.less</em>, <em>assets/js/pages/curso/index.page.js</em>, and <em>api/controllers/curso/view-index.js</em>.)</p> -->
+    <!-- <p>(See also <em>assets/styles/pages/curso/index.less</em>, <em>assets/js/pages/curso/index.page.js</em>, and <em>api/controllers/curso/view-index.js</em>.)</p> -->
 
 </div>
