@@ -36,11 +36,11 @@ module.exports.routes = {
 
   // actions curso
   'POST /curso': { action: 'curso/create' },
-  // 'POST /curso/update': { action: 'curso/update' },
+  'POST /curso/update/:id': { action: 'curso/update' },
   // views curso
   'GET /curso': { action: 'curso/index' },
   'GET /curso/create': { action: 'view-criar-curso' },
-  // 'GET /curso/update/:id': { action: 'view-criar-curso' },
+  'GET /curso/update/:id': { action: 'curso/view-curso-update' },
 
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗

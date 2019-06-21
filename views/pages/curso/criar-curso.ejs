@@ -11,18 +11,38 @@
 
         <h2>Criar Curso</h2>
 
-        <form action="/curso" method="post" class="mt2">
+        <% if(typeof update != "undefined" && update){%>
+            <form action="/curso" method="post" class="mt2">
+        <%}else{%>
+            <form action="/curso/update/<%= id %>" method="post" class="mt2">
+        <% } %>
+
             <div class="form-group">
                 <label for="sigla">Sigla</label>
+                <% if(typeof sigla != "undefined"){ %>
+                <input type="text" id="sigla" name="sigla" class="form-control" placeholder="IE07" value="<%= sigla %>"
+                    required>
+                <% }else{ %>
                 <input type="text" id="sigla" name="sigla" class="form-control" placeholder="IE07" required>
+                <% } %>
             </div>
             <div class="form-group">
                 <label for="nome">Nome do curso</label>
-                <input type="text" id="nome" name='nome' class="form-control" placeholder="Ciência da Computação" required>
+                <% if(typeof nome != "undefined"){ %>
+                <input type="text" id="nome" name='nome' class="form-control" placeholder="Ciência da Computação"
+                    value="<%= nome %>"" required>
+                <% }else{ %>
+                    <input type=" text" id="nome" name='nome' class="form-control" placeholder="Ciência da Computação"
+                    required>
+                <% } %>
             </div>
-            <div class="form-group">
+            <div class=" form-group">
                 <label for="desc">Descrição</label>
-                <textarea id="desc" class="form-control" name="descricao" cols="30" rows="5"></textarea>
+                <% if(typeof descricao != "undefined"){ %>
+                    <textarea id="desc" class="form-control" name="descricao" cols="30" rows="5"><%= descricao %></textarea>
+                <% }else{ %>
+                    <textarea id="desc" class="form-control" name="descricao" cols="30" rows="5"></textarea>
+                <% } %>
             </div>
             <input type="hidden" name="_csrf" value="<%= _csrf %>">
             <input type="submit" class="btn btn-success" value="Salvar">
