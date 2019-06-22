@@ -35,12 +35,14 @@ module.exports.routes = {
   'GET /account/profile': { action: 'account/view-edit-profile' },
 
   // actions curso
-  'POST /curso': { action: 'curso/create' },
-  'POST /curso/update/:id': { action: 'curso/update' },
+  'POST /curso': { action: 'curso/curso/create' },
+  'POST /curso/update/:id': { action: 'curso/curso/update' },
+  'GET /curso/delete/:id': { action: 'curso/curso/delete' },
   // views curso
-  'GET /curso': { action: 'curso/index' },
-  'GET /curso/create': { action: 'view-criar-curso' },
+  'GET /curso': { action: 'curso/curso/index' },
+  'GET /curso/create': { action: 'curso/view-criar-curso' },
   'GET /curso/update/:id': { action: 'curso/view-curso-update' },
+  'GET /curso/:id': {action: 'curso/view-curso'},
 
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗

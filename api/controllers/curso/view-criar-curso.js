@@ -19,7 +19,7 @@ module.exports = {
   fn: async function () {
 
     // Respond with view.
-    return {title: 'Criar curso'};
+    return { title: 'Criar curso' };
 
   }
 

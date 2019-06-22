@@ -16,7 +16,7 @@ module.exports = async function viewCursoUpdate(req, res) {
 	let cursoOk = await Curso.findOne({ id })
 
 	let resp = {
-		title: `atualizar dados do curso`,
+		title: `Atualizar dados do curso`,
 		sigla: cursoOk.sigla,
 		nome: cursoOk.nome,
 		descricao: cursoOk.descricao,
