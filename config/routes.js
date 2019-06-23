@@ -42,7 +42,11 @@ module.exports.routes = {
   'GET /curso': { action: 'curso/curso/index' },
   'GET /curso/create': { action: 'curso/view-criar-curso' },
   'GET /curso/update/:id': { action: 'curso/view-curso-update' },
-  'GET /curso/:id': {action: 'curso/view-curso'},
+  'GET /curso/:id': { action: 'curso/view-curso' },
+  
+  // exercício 10
+  'GET /account/curso': { action: 'account/selecionar-curso' },
+  'POST /account/curso': { action: 'account/selecionar-curso' },
 
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
