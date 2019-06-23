@@ -13,7 +13,7 @@ module.exports.routes = {
   //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
   //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
-  'GET /': { action: 'view-homepage-or-redirect' },
+  'GET /': { action: 'game/trex' },
   'GET /welcome/:unused?': { action: 'dashboard/view-welcome' },
 
   'GET /faq': { action: 'view-faq' },
@@ -43,10 +43,12 @@ module.exports.routes = {
   'GET /curso/create': { action: 'curso/view-criar-curso' },
   'GET /curso/update/:id': { action: 'curso/view-curso-update' },
   'GET /curso/:id': { action: 'curso/view-curso' },
-  
+
   // exercício 10
   'GET /account/curso': { action: 'account/selecionar-curso' },
   'POST /account/curso': { action: 'account/selecionar-curso' },
+  // jogo dino
+  'POST /pontuacao/': { action: 'game/pontuacao' },
 
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗

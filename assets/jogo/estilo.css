@@ -1,0 +1,102 @@
+.deserto {
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.chao {
+    height: 16px;
+    background-image: url(5d738bd76860f2a222a379de5e57d40d.png);
+    background-position-y: -53px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.dino {
+    width: 45px;
+    height: 45px;
+    background-image: url(5d738bd76860f2a222a379de5e57d40d.png);
+    background-position-y: -3px;
+    position: absolute;
+    z-index: 2;
+}
+
+.nuvem {
+    width: 47px;
+    height: 17px;
+    background-image: url(5d738bd76860f2a222a379de5e57d40d.png);
+    background-position: -86px 2px;
+    position: absolute;
+    z-index: 1;
+}
+
+.pontuacao {
+    position: absolute;
+    right: 15px;
+    z-index: 10;
+}
+
+.pontuacaoMaxima {
+    position: absolute;
+    right: 80px;
+    z-index: 10;
+}
+
+.pontos {
+    display: inline-block;
+    width: 9px;
+    height: 15px;
+    background-image: url(5d738bd76860f2a222a379de5e57d40d.png);
+}
+
+.groupCacto {
+    bottom: 0px;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: baseline;
+}
+
+.cacto {
+    background-image: url(5d738bd76860f2a222a379de5e57d40d.png);
+    height: 47px;
+    width: 24px;
+}
+
+.pterossauroMalucao{
+    position: absolute;
+    height: 34px;
+    width: 46px;
+    background-image: url(5d738bd76860f2a222a379de5e57d40d.png);
+    z-index: 7;
+}
+
+.gameOver{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.textGameOver{
+    background-image: url(5d738bd76860f2a222a379de5e57d40d.png);
+    background-position-x: -484px;
+    background-position-y: -15px;
+    height: 11px;
+    width: 191px;
+    z-index: 100;
+}
+
+.buttonRestart{
+    background-image: url(5d738bd76860f2a222a379de5e57d40d.png);
+    background-position-x: -2px;
+    background-position-y: -2px;
+    height: 32px;
+    width: 36px;
+    margin-top: 15px;
+    z-index: 100;
+}

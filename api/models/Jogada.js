@@ -13,10 +13,6 @@ module.exports = {
       unique: true,
       type: 'number'
     },
-    jogador: {
-      type: 'number',
-      required: true
-    },
     pontuacao: {
       type: 'number',
       required: true
