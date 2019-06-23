@@ -49,6 +49,7 @@ module.exports.routes = {
   'POST /account/curso': { action: 'account/selecionar-curso' },
   // jogo dino
   'POST /pontuacao/': { action: 'game/pontuacao' },
+  'GET /ranking': {action: 'game/ranking'},
 
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗

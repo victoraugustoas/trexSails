@@ -29,5 +29,31 @@ module.exports = {
             }
             await Jogada.create(newJogada)
         }
+    },
+    ranking: async (req, res) => {
+        let jogadasOk = await Jogada.find()
+        let jogadas = []
+        console.log(jogadasOk)
+
+        for (let i = 0; i < jogadasOk.length; i++) {
+            let ele = jogadasOk[i]
+            let user = await User.findOne({ id: ele.user })
+            let data = new Date(parseInt(ele.data))
+            data = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} ${data.getHours()}:${data.getMinutes()}`
+            jogadas.push({
+                jogador: user.fullName,
+                pontuacao: ele.pontuacao,
+                data
+            })
+        }
+
+        let resp = {
+            title: `Ranking`,
+            jogadas
+        }
+
+        console.log(resp)
+
+        return res.view('pages/ranking', resp)
     }
 };

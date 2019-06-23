@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <div class="row">
+        <h1>Ranking dos jogadores</h1>
+    </div>
+    <div class="row mt-3">
+        <table class="table">
+            <thead>
+                <td>Jogador</td>
+                <td>Pontuação</td>
+                <td>Data/hora</td>
+            </thead>
+            <tbody>
+                <% jogadas.forEach((ele)=>{ %>
+                <tr>
+                    <td><strong><%= ele.jogador%></strong></td>
+                    <td><%= ele.pontuacao%></td>
+                    <td><%= ele.data%></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </div>
+</div>
