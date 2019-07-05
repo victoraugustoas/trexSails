@@ -30,6 +30,10 @@ module.exports = {
             await Jogada.create(newJogada)
         }
     },
+    pontuacao_max: async (req, resp) => {
+        let jogadaOk = await Jogada.findOne({ user: req.me.id })
+        return resp.json(jogadaOk.pontuacao)
+    },
     ranking: async (req, res) => {
         let jogadasOk = await Jogada.find()
         let jogadas = []

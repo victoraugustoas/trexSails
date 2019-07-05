@@ -5,6 +5,10 @@
     width: 100%;
 }
 
+body{
+    overflow-y:hidden;
+}
+
 .chao {
     height: 16px;
     background-image: url(5d738bd76860f2a222a379de5e57d40d.png);
